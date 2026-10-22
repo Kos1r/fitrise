@@ -1,0 +1,3 @@
+// Release configuration. The Anthropic key is never embedded in release builds;
+// the app talks only to the backend proxy.
+ANTHROPIC_DEV_API_KEY =

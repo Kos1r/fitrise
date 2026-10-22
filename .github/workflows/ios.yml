@@ -1,0 +1,138 @@
+name: iOS build & test
+
+on:
+  push:
+    branches-ignore: [ci-results]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select newest stable Xcode
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | grep -vi -E 'beta|rc' | sort -V | tail -1)
+          echo "Using $XCODE"
+          sudo xcode-select -s "$XCODE/Contents/Developer"
+          xcodebuild -version
+          swift --version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate project
+        run: xcodegen generate
+
+      - name: Pick simulator
+        run: |
+          SIM_JSON=$(xcrun simctl list devices available -j)
+          SIM_ID=$(echo "$SIM_JSON" | jq -r '[.devices | to_entries[] | select(.key | test("iOS")) | .value[] | select(.name | test("^iPhone [0-9]+( Pro)?$"))] | last | .udid')
+          SIM_NAME=$(echo "$SIM_JSON" | jq -r --arg id "$SIM_ID" '[.devices[][] | select(.udid == $id)] | first | .name')
+          echo "SIM_ID=$SIM_ID" >> "$GITHUB_ENV"
+          echo "Simulator: $SIM_NAME ($SIM_ID)"
+          xcrun simctl boot "$SIM_ID" || true
+
+      - name: Build and test
+        id: test
+        run: |
+          mkdir -p ci-out/screenshots
+          export TEST_RUNNER_SCREENSHOT_DIR="$PWD/ci-out/screenshots"
+          set -o pipefail
+          xcodebuild test \
+            -project LiftFuel.xcodeproj \
+            -scheme LiftFuel \
+            -destination "id=$SIM_ID" \
+            -resultBundlePath ci-out/Results.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            2>&1 | tee ci-out/xcodebuild.log
+
+      - name: Summarize
+        if: always()
+        run: |
+          LOG=ci-out/xcodebuild.log
+          touch "$LOG"
+          grep -E ": error: " "$LOG" | sort -u > ci-out/errors.txt || true
+          grep -E ": warning: " "$LOG" | grep -v "/DerivedData/" | sort -u > ci-out/warnings.txt || true
+          grep -E "(Test Case .* (passed|failed)|error: -\[|Executed [0-9]+ test)" "$LOG" > ci-out/tests.txt || true
+          tail -n 400 "$LOG" > ci-out/log-tail.txt
+          if [ -d ci-out/Results.xcresult ]; then
+            xcrun xcresulttool get test-results summary --path ci-out/Results.xcresult > ci-out/test-summary.json 2>/dev/null || true
+            xcrun xcresulttool get test-results tests --path ci-out/Results.xcresult > ci-out/test-details.json 2>/dev/null || true
+            if [ -z "$(ls -A ci-out/screenshots 2>/dev/null)" ]; then
+              mkdir -p ci-out/attachments
+              xcrun xcresulttool export attachments --path ci-out/Results.xcresult --output-path ci-out/attachments 2>/dev/null || true
+            fi
+          fi
+          {
+            echo "## iOS build"
+            echo "- Outcome: ${{ steps.test.outcome }}"
+            echo "- Errors: $(wc -l < ci-out/errors.txt | tr -d ' ')"
+            echo "- Warnings (project): $(wc -l < ci-out/warnings.txt | tr -d ' ')"
+            echo '```'
+            head -n 60 ci-out/errors.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          # Inline annotations for compiler errors.
+          head -n 50 ci-out/errors.txt | while IFS= read -r line; do
+            file=$(echo "$line" | cut -d: -f1 | sed "s|$PWD/||")
+            lineno=$(echo "$line" | cut -d: -f2)
+            msg=$(echo "$line" | cut -d: -f5-)
+            echo "::error file=$file,line=$lineno::$msg"
+          done
+
+      - name: Publish results to ci-results branch
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          set -e
+          SHA=${GITHUB_SHA::7}
+          rm -rf /tmp/results && mkdir -p /tmp/results
+          cp ci-out/*.txt /tmp/results/ 2>/dev/null || true
+          cp ci-out/*.json /tmp/results/ 2>/dev/null || true
+          cp -R ci-out/screenshots /tmp/results/ 2>/dev/null || true
+          if [ -d ci-out/attachments ]; then
+            mkdir -p /tmp/results/attachments
+            find ci-out/attachments -name "*.png" -exec cp {} /tmp/results/attachments/ \; || true
+          fi
+          echo "commit=$GITHUB_SHA outcome=${{ steps.test.outcome }} run=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" > /tmp/results/STATUS.txt
+          cd /tmp/results
+          git init -q
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git checkout -q -b ci-results
+          git add -A
+          git commit -q -m "CI results for $SHA (${{ steps.test.outcome }})"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" ci-results
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-results
+          path: |
+            ci-out/*.txt
+            ci-out/*.json
+            ci-out/screenshots
+          retention-days: 7
+
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Test proxy
+        working-directory: backend
+        run: node --test

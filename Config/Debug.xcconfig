@@ -1,0 +1,6 @@
+// Debug configuration.
+// DEVELOPMENT ONLY: Secrets.xcconfig (git-ignored) may define ANTHROPIC_DEV_API_KEY so the
+// Debug build can talk to the Claude API directly without the proxy. Release builds never
+// read it (see Release.xcconfig and AppConfig.devAPIKey).
+ANTHROPIC_DEV_API_KEY =
+#include? "Secrets.xcconfig"

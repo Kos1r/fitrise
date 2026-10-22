@@ -1,0 +1,34 @@
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+xcuserdata/
+DerivedData/
+build/
+*.xcresult
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Secrets — never commit
+Config/Secrets.xcconfig
+*.p8
+*.p12
+*.mobileprovision
+.env
+.env.*
+!.env.example
+backend/.dev.vars
+
+# Node / Cloudflare
+node_modules/
+backend/.wrangler/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# CI output
+screenshots/
+ci-results/

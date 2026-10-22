@@ -1,0 +1,17 @@
+name = "lift-fuel-proxy"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# Secrets — never put them in this file:
+#   npx wrangler secret put ANTHROPIC_API_KEY
+#   npx wrangler secret put APP_TOKEN
+
+# Cloudflare Rate Limiting binding: 30 requests per minute per app token + IP.
+# If unavailable on your plan, remove this block; the Worker falls back to an in-memory limiter.
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 30
+  period = 60
