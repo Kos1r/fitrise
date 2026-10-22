@@ -358,7 +358,10 @@ struct ProgressHintsCard: View {
                 ))
             }
         }
-        return Array(result.prefix(4))
+        // Actionable "add weight" notes first; at most two plateau warnings so the card stays short.
+        let overload = result.filter { $0.id.hasPrefix("overload") }
+        let plateau = result.filter { $0.id.hasPrefix("plateau") }.prefix(2)
+        return Array((overload + plateau).prefix(4))
     }
 
     var body: some View {

@@ -35,7 +35,7 @@ struct RestTimerBar: View {
                         .font(.subheadline.weight(.bold))
                         .frame(width: 40, height: 40)
                         .background(Color.brand, in: Circle())
-                        .foregroundStyle(.black.opacity(0.85))
+                        .foregroundStyle(Color.onAccent)
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Skip rest")

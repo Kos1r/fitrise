@@ -28,7 +28,7 @@ struct SetRowView: View {
 
     private var typeMenu: some View {
         Menu {
-            Picker("Set type", selection: Binding(get: { set.setType }, set: onChangeType)) {
+            Picker("Set type", selection: Binding(get: { set.setType }, set: { onChangeType($0) })) {
                 ForEach(SetType.allCases) { type in
                     Text(type.title).tag(type)
                 }
@@ -101,7 +101,7 @@ struct SetRowView: View {
         Button(action: onToggleComplete) {
             Image(systemName: "checkmark")
                 .font(.body.weight(.heavy))
-                .foregroundStyle(set.isCompleted ? Color.black.opacity(0.85) : Color.secondary)
+                .foregroundStyle(set.isCompleted ? Color.onAccent : Color.secondary)
                 .frame(width: 44, height: 40)
                 .background(
                     RoundedRectangle(cornerRadius: Radius.small, style: .continuous)

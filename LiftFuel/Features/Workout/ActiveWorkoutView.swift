@@ -19,6 +19,7 @@ struct ActiveWorkoutView: View {
     private var increment: Double { profiles.first?.weightIncrement ?? 2.5 }
 
     var body: some View {
+        ScrollViewReader { proxy in
         List {
             ForEach(session.orderedLogs) { log in
                 ExerciseSetsSection(
@@ -38,6 +39,7 @@ struct ActiveWorkoutView: View {
                     Label("Discard workout", systemImage: "trash")
                         .frame(maxWidth: .infinity)
                 }
+                .accessibilityIdentifier("workout.discard")
                 .listRowBackground(Color.clear)
             }
         }
@@ -45,6 +47,17 @@ struct ActiveWorkoutView: View {
         .scrollContentBackground(.hidden)
         .background(Color.appBackground)
         .listSectionSpacing(Spacing.l)
+        .onChange(of: focusedField) { _, field in
+            // Keep the row being edited visible above the keypad.
+            guard let field else { return }
+            Task {
+                try? await Task.sleep(for: .milliseconds(200))
+                withAnimation(reduceMotion ? nil : .snappySpring) {
+                    proxy.scrollTo(field.setID, anchor: .center)
+                }
+            }
+        }
+        }
         .safeAreaInset(edge: .top, spacing: 0) {
             WorkoutStatsBar(session: session)
         }
@@ -59,7 +72,7 @@ struct ActiveWorkoutView: View {
                     .font(.headline)
                     .buttonStyle(.borderedProminent)
                     .tint(.brand)
-                    .foregroundStyle(.black.opacity(0.85))
+                    .foregroundStyle(Color.onAccent)
                     .accessibilityIdentifier("workout.finish")
             }
         }
@@ -82,6 +95,7 @@ struct ActiveWorkoutView: View {
                 restTimer.skip()
                 WorkoutService.discard(session, in: modelContext)
             }
+            .accessibilityIdentifier("workout.discardConfirm")
         } message: {
             Text("Nothing from this session will be saved.")
         }
@@ -255,6 +269,7 @@ struct ExerciseSetsSection: View {
                     },
                     onDelete: { delete(set) }
                 )
+                .id(set.id)
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(top: 0, leading: Spacing.m, bottom: 0, trailing: Spacing.m))
                 .swipeActions(edge: .trailing, allowsFullSwipe: true) {

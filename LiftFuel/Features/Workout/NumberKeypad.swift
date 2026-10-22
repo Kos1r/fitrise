@@ -105,11 +105,16 @@ struct NumberKeypad: View {
             }
 
             HStack(alignment: .top, spacing: Spacing.s) {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: Spacing.s), count: 3), spacing: Spacing.s) {
-                    ForEach(keys, id: \.self) { key in
-                        keyButton(key)
+                VStack(spacing: Spacing.s) {
+                    ForEach(0..<4, id: \.self) { row in
+                        HStack(spacing: Spacing.s) {
+                            ForEach(keys[(row * 3)..<(row * 3 + 3)], id: \.self) { key in
+                                keyButton(key)
+                            }
+                        }
                     }
                 }
+                .frame(maxWidth: .infinity)
                 VStack(spacing: Spacing.s) {
                     Button(action: onNext) {
                         Text("Next")
@@ -123,7 +128,7 @@ struct NumberKeypad: View {
                             .font(.headline)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
-                    .buttonStyle(KeyStyle(tint: .brand, foreground: .black.opacity(0.85)))
+                    .buttonStyle(KeyStyle(tint: .brand, foreground: Color.onAccent))
                     .accessibilityIdentifier("keypad.done")
                 }
                 .frame(width: 84)
@@ -167,7 +172,7 @@ struct NumberKeypad: View {
                 }
             }
             .font(.title2.weight(.semibold))
-            .frame(maxWidth: .infinity, minHeight: 48)
+            .frame(maxWidth: .infinity, minHeight: 48, maxHeight: .infinity)
         }
         .buttonStyle(KeyStyle(tint: Color.cardBackground, foreground: .primary))
         .disabled(disabled)

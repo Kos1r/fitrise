@@ -51,7 +51,7 @@ struct CalendarScreen: View {
         return Card {
             HStack(spacing: Spacing.m) {
                 StatTile(value: "\(streak)", label: "Day streak", symbol: "flame.fill", tint: Color("PushColor"))
-                StatTile(value: "\(done)/\(planned)", label: "Workouts this week", symbol: "checkmark.seal.fill", tint: .brand)
+                StatTile(value: "\(done)/\(planned)", label: "This week", symbol: "checkmark.seal.fill", tint: .brand)
                 StatTile(
                     value: next.map { $0.date.formatted(.dateTime.weekday(.abbreviated)) + " · " + $0.split.titleString } ?? "—",
                     label: "Next training",

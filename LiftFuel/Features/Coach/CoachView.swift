@@ -211,7 +211,7 @@ struct CoachView: View {
                 } label: {
                     Image(systemName: coach.isResponding ? "stop.fill" : "arrow.up")
                         .font(.headline.weight(.bold))
-                        .foregroundStyle(.black.opacity(0.85))
+                        .foregroundStyle(Color.onAccent)
                         .frame(width: 42, height: 42)
                         .background(Color.brand, in: Circle())
                 }
@@ -290,7 +290,7 @@ struct UserBubble: View {
                 Text(message.text)
                     .padding(.horizontal, Spacing.m)
                     .padding(.vertical, Spacing.s + 2)
-                    .foregroundStyle(.black.opacity(0.88))
+                    .foregroundStyle(Color.onAccent)
                     .background(Color.brand, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
             }
             if message.status == .failed {

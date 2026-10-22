@@ -7,6 +7,8 @@ import SwiftUI
 extension ShapeStyle where Self == Color {
     /// The single strong accent (electric lime).
     static var brand: Color { Color("AccentColor") }
+    /// Text/icons drawn on top of the accent or split colors (black in dark mode, white in light).
+    static var onAccent: Color { Color("OnAccent") }
     static var appBackground: Color { Color("AppBackground") }
     static var cardBackground: Color { Color("CardBackground") }
     static var cardElevated: Color { Color("CardElevated") }

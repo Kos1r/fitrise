@@ -2,8 +2,9 @@ import XCTest
 
 /// Captures the main screens with demo data. Images are attached to the test result and,
 /// when SCREENSHOT_DIR is set (CI passes TEST_RUNNER_SCREENSHOT_DIR), written as PNGs.
+@MainActor
 final class ScreenshotTests: XCTestCase {
-    override func setUpWithError() throws {
+    override func setUp() async throws {
         continueAfterFailure = true
     }
 

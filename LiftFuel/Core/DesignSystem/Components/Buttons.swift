@@ -9,7 +9,7 @@ struct PrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(compact ? .subheadline.weight(.semibold) : .headline)
-            .foregroundStyle(Color.black.opacity(0.88))
+            .foregroundStyle(Color.onAccent)
             .padding(.vertical, compact ? Spacing.s + 2 : Spacing.l)
             .padding(.horizontal, compact ? Spacing.l : Spacing.xl)
             .frame(maxWidth: compact ? nil : .infinity, minHeight: compact ? 40 : 56)

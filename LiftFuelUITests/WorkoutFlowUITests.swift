@@ -1,7 +1,8 @@
 import XCTest
 
+@MainActor
 final class WorkoutFlowUITests: XCTestCase {
-    override func setUpWithError() throws {
+    override func setUp() async throws {
         continueAfterFailure = false
     }
 
@@ -46,7 +47,7 @@ final class WorkoutFlowUITests: XCTestCase {
 
         // Finish (some sets incomplete → confirmation).
         app.buttons["workout.finish"].tap()
-        let confirm = app.buttons["Finish workout"]
+        let confirm = app.buttons["workout.finishConfirm"]
         XCTAssertTrue(confirm.waitForExistence(timeout: 3))
         confirm.tap()
 
@@ -60,9 +61,23 @@ final class WorkoutFlowUITests: XCTestCase {
     func testAddSetAndDiscard() {
         let app = launch()
         startWorkout(app)
-        let before = app.buttons.matching(identifier: "set.complete").count
+        // The first exercise starts with 3 sets; adding one shows a 4th set row.
+        // (Counting all rows is unreliable because List renders rows lazily.)
+        let fourthSet = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Set 4,")).firstMatch
+        XCTAssertFalse(fourthSet.exists)
         app.buttons.matching(identifier: "workout.addSet").firstMatch.tap()
-        XCTAssertEqual(app.buttons.matching(identifier: "set.complete").count, before + 1)
+        XCTAssertTrue(fourthSet.waitForExistence(timeout: 3))
+
+        // Discard via the button at the bottom of the list.
+        let discard = app.buttons["workout.discard"]
+        for _ in 0..<8 where !discard.isHittable {
+            app.swipeUp()
+        }
+        discard.tap()
+        let confirm = app.buttons.matching(identifier: "workout.discardConfirm").firstMatch
+        XCTAssertTrue(confirm.waitForExistence(timeout: 3))
+        confirm.tap()
+        XCTAssertTrue(app.buttons["hub.startPush"].waitForExistence(timeout: 5))
     }
 
     func testCoachLogsMealWithMockService() {

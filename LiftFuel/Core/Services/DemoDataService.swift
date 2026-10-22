@@ -67,7 +67,7 @@ enum DemoDataService {
                 // Plateau the last few sessions of pullovers so the deload hint shows up.
                 let effectiveIndex = exercise.stableID == "pullovers" ? min(index, 6) : index
                 let rawWeight = base.weight + Double(effectiveIndex) * base.step
-                let weight = (rawWeight / 2.5).rounded() * 2.5
+                let weight = (rawWeight / 1.25).rounded() * 1.25
                 let upper = exercise.repRangeUpper
                 let lower = exercise.repRangeLower
                 for setNumber in 0..<3 {
