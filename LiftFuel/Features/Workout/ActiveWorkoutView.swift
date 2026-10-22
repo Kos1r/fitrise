@@ -6,6 +6,7 @@ struct ActiveWorkoutView: View {
 
     @Environment(\.modelContext) private var modelContext
     @Environment(RestTimerManager.self) private var restTimer
+    @Environment(AppRouter.self) private var router
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Query private var profiles: [UserProfile]
 
@@ -14,7 +15,6 @@ struct ActiveWorkoutView: View {
     @State private var prToast: PRToast?
     @State private var showFinishConfirm = false
     @State private var showDiscardConfirm = false
-    @State private var finishedSummary: WorkoutSummary?
 
     private var increment: Double { profiles.first?.weightIncrement ?? 2.5 }
 
@@ -98,9 +98,6 @@ struct ActiveWorkoutView: View {
             .accessibilityIdentifier("workout.discardConfirm")
         } message: {
             Text("Nothing from this session will be saved.")
-        }
-        .sheet(item: $finishedSummary) { summary in
-            WorkoutSummarySheet(summary: summary)
         }
         .onChange(of: buffer) { _, newValue in
             write(buffer: newValue)
@@ -225,7 +222,7 @@ struct ActiveWorkoutView: View {
         }
         WidgetSyncService.update(context: modelContext)
         Haptics.success()
-        finishedSummary = summary
+        router.finishedSummary = summary
     }
 }
 

@@ -13,8 +13,10 @@ struct WorkoutTabView: View {
     @Query(filter: #Predicate<WorkoutSession> { $0.endedAt == nil }, sort: \WorkoutSession.startedAt, order: .reverse)
     private var activeSessions: [WorkoutSession]
     @State private var path = NavigationPath()
+    @Environment(AppRouter.self) private var router
 
     var body: some View {
+        @Bindable var router = router
         NavigationStack(path: $path) {
             Group {
                 if let session = activeSessions.first {
@@ -26,6 +28,9 @@ struct WorkoutTabView: View {
             .navigationDestination(for: WorkoutRoute.self) { route in
                 WorkoutRouteView(route: route)
             }
+        }
+        .sheet(item: $router.finishedSummary) { summary in
+            WorkoutSummarySheet(summary: summary)
         }
     }
 }

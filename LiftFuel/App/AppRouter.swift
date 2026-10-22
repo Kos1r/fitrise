@@ -13,6 +13,8 @@ final class AppRouter {
     var showSettings = false
     var showWeeklySummary = false
     var showBodyWeight = false
+    /// Shown after finishing a workout; lives here because the active-workout view disappears on finish.
+    var finishedSummary: WorkoutSummary?
     /// Set by App Intents / notifications; consumed by RootView.
     var pendingStartWorkout = false
 
