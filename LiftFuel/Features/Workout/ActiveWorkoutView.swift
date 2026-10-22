@@ -51,9 +51,9 @@ struct ActiveWorkoutView: View {
             // Keep the row being edited visible above the keypad.
             guard let field else { return }
             Task {
-                try? await Task.sleep(for: .milliseconds(200))
+                try? await Task.sleep(for: .milliseconds(350))
                 withAnimation(reduceMotion ? nil : .snappySpring) {
-                    proxy.scrollTo(field.setID, anchor: .center)
+                    proxy.scrollTo(field.setID, anchor: UnitPoint(x: 0.5, y: 0.2))
                 }
             }
         }

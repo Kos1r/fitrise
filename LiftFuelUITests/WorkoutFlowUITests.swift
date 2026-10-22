@@ -47,7 +47,7 @@ final class WorkoutFlowUITests: XCTestCase {
 
         // Finish (some sets incomplete → confirmation).
         app.buttons["workout.finish"].tap()
-        let confirm = app.buttons["workout.finishConfirm"]
+        let confirm = app.buttons.matching(identifier: "workout.finishConfirm").firstMatch
         XCTAssertTrue(confirm.waitForExistence(timeout: 3))
         confirm.tap()
 
