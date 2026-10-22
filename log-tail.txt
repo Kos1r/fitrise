@@ -1,0 +1,400 @@
+Test Case '-[LiftFuelUITests.ScreenshotTests testLightModeHome]' started.
+    t =     0.00s Start Test at 2026-10-22 21:58:19.717
+    t =     0.03s Set Up
+    t =     0.03s Open com.liftfuel.app
+    t =     0.03s     Launch com.liftfuel.app
+    t =     0.03s         Terminate com.liftfuel.app:10355
+    t =     1.59s         Setting up automation session
+    t =     3.90s         Wait for com.liftfuel.app to idle
+    t =     6.72s Waiting 10.0s for TabBar (First Match) to exist
+    t =     7.74s     Checking `Expect predicate `existsNoRetry == 1` for object TabBar (First Match)`
+    t =     7.74s         Checking existence of `TabBar (First Match)`
+    t =     8.84s Find the Target Application 'com.liftfuel.app'
+    t =     9.13s Added attachment named '13-home-light'
+    t =     9.13s Tap "Nutrition" Button
+    t =     9.14s     Wait for com.liftfuel.app to idle
+    t =     9.14s     Find the "Nutrition" Button
+    t =     9.24s     Check for interrupting elements affecting "fork.knife" Button
+    t =     9.30s     Synthesize event
+    t =     9.61s     Wait for com.liftfuel.app to idle
+    t =    12.59s Find the Target Application 'com.liftfuel.app'
+    t =    12.91s Added attachment named '14-nutrition-light'
+    t =    12.92s Tear Down
+Test Case '-[LiftFuelUITests.ScreenshotTests testLightModeHome]' passed (13.173 seconds).
+Test Case '-[LiftFuelUITests.ScreenshotTests testMainScreens]' started.
+    t =     0.00s Start Test at 2026-10-22 21:58:32.890
+    t =     0.03s Set Up
+    t =     0.03s Open com.liftfuel.app
+    t =     0.03s     Launch com.liftfuel.app
+    t =     0.03s         Terminate com.liftfuel.app:10710
+    t =     1.70s         Setting up automation session
+    t =     4.21s         Wait for com.liftfuel.app to idle
+    t =     6.66s Waiting 10.0s for TabBar (First Match) to exist
+    t =     7.69s     Checking `Expect predicate `existsNoRetry == 1` for object TabBar (First Match)`
+    t =     7.69s         Checking existence of `TabBar (First Match)`
+    t =     8.76s Find the Target Application 'com.liftfuel.app'
+    t =     9.01s Added attachment named '01-home'
+    t =     9.01s Swipe up Target Application 'com.liftfuel.app'
+    t =     9.01s     Wait for com.liftfuel.app to idle
+    t =     9.01s     Find the Target Application 'com.liftfuel.app'
+    t =     9.05s     Check for interrupting elements affecting "Lift & Fuel" Application
+    t =     9.15s     Synthesize event
+    t =     9.60s     Wait for com.liftfuel.app to idle
+    t =    11.63s Find the Target Application 'com.liftfuel.app'
+    t =    11.87s Added attachment named '02-home-scrolled'
+    t =    11.87s Tap "Calendar" Button
+    t =    11.87s     Wait for com.liftfuel.app to idle
+    t =    11.87s     Find the "Calendar" Button
+    t =    11.97s     Check for interrupting elements affecting "calendar" Button
+    t =    12.04s     Synthesize event
+    t =    12.35s     Wait for com.liftfuel.app to idle
+    t =    15.54s Find the Target Application 'com.liftfuel.app'
+    t =    15.75s Added attachment named '03-calendar'
+    t =    15.75s Tap "Nutrition" Button
+    t =    15.75s     Wait for com.liftfuel.app to idle
+    t =    15.75s     Find the "Nutrition" Button
+    t =    15.83s     Check for interrupting elements affecting "fork.knife" Button
+    t =    15.90s     Synthesize event
+    t =    16.22s     Wait for com.liftfuel.app to idle
+    t =    19.29s Find the Target Application 'com.liftfuel.app'
+    t =    19.56s Added attachment named '04-nutrition'
+    t =    19.57s Swipe up Target Application 'com.liftfuel.app'
+    t =    19.57s     Wait for com.liftfuel.app to idle
+    t =    19.57s     Find the Target Application 'com.liftfuel.app'
+    t =    19.63s     Check for interrupting elements affecting "Lift & Fuel" Application
+    t =    19.68s     Synthesize event
+    t =    20.10s     Wait for com.liftfuel.app to idle
+    t =    23.17s Find the Target Application 'com.liftfuel.app'
+    t =    23.45s Added attachment named '05-nutrition-scrolled'
+    t =    23.45s Tap "Coach" Button
+    t =    23.45s     Wait for com.liftfuel.app to idle
+    t =    23.46s     Find the "Coach" Button
+    t =    23.56s     Check for interrupting elements affecting "bubble.left.and.text.bubble.right.fill" Button
+    t =    23.63s     Synthesize event
+    t =    24.05s     Wait for com.liftfuel.app to idle
+    t =    27.35s Find the Target Application 'com.liftfuel.app'
+    t =    27.63s Added attachment named '06-coach'
+    t =    27.64s Tap "Workout" Button
+    t =    27.64s     Wait for com.liftfuel.app to idle
+    t =    27.64s     Find the "Workout" Button
+    t =    27.69s     Check for interrupting elements affecting "dumbbell.fill" Button
+    t =    27.76s     Synthesize event
+    t =    28.10s     Wait for com.liftfuel.app to idle
+    t =    32.17s Find the Target Application 'com.liftfuel.app'
+    t =    32.37s Added attachment named '07-workout-hub'
+    t =    32.37s Waiting 3.0s for "hub.startPush" Button to exist
+    t =    33.40s     Checking `Expect predicate `existsNoRetry == 1` for object "hub.startPush" Button`
+    t =    33.40s         Checking existence of `"hub.startPush" Button`
+    t =    33.48s Tap "hub.startPush" Button
+    t =    33.48s     Wait for com.liftfuel.app to idle
+    t =    33.48s     Find the "hub.startPush" Button
+    t =    33.58s     Check for interrupting elements affecting "hub.startPush" Button
+    t =    33.65s     Synthesize event
+    t =    33.96s     Wait for com.liftfuel.app to idle
+    t =    35.96s Find the Target Application 'com.liftfuel.app'
+    t =    36.21s Added attachment named '08-active-workout'
+    t =    36.21s Checking existence of `"set.complete" Button`
+    t =    36.43s Tap "set.complete" Button
+    t =    36.43s     Wait for com.liftfuel.app to idle
+    t =    36.43s     Find the "set.complete" Button
+    t =    36.62s     Check for interrupting elements affecting "set.complete" Button
+    t =    36.70s     Synthesize event
+    t =    37.00s     Wait for com.liftfuel.app to idle
+    t =    38.84s Find the Target Application 'com.liftfuel.app'
+    t =    39.10s Added attachment named '09-rest-timer'
+    t =    39.10s Checking existence of `"set.weight" Button`
+    t =    39.21s Tap "set.weight" Button
+    t =    39.21s     Wait for com.liftfuel.app to idle
+    t =    39.22s     Find the "set.weight" Button
+    t =    39.32s     Check for interrupting elements affecting "set.weight" Button
+    t =    39.41s     Synthesize event
+    t =    39.73s     Wait for com.liftfuel.app to idle
+    t =    40.89s Find the Target Application 'com.liftfuel.app'
+    t =    41.14s Added attachment named '10-keypad'
+    t =    41.15s Tear Down
+Test Case '-[LiftFuelUITests.ScreenshotTests testMainScreens]' passed (41.638 seconds).
+Test Suite 'ScreenshotTests' passed at 2026-10-22 21:59:14.528.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 65.417 (65.419) seconds
+Test Suite 'WorkoutFlowUITests' started at 2026-10-22 21:59:14.529.
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testAddSetAndDiscard]' started.
+    t =     0.00s Start Test at 2026-10-22 21:59:14.530
+    t =     0.07s Set Up
+    t =     0.07s Open com.liftfuel.app
+    t =     0.07s     Launch com.liftfuel.app
+    t =     0.07s         Terminate com.liftfuel.app:11365
+    t =     3.97s         Setting up automation session
+    t =     5.39s         Wait for com.liftfuel.app to idle
+    t =     8.00s Waiting 5.0s for "home.startWorkout" Button to exist
+    t =     9.02s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =     9.02s         Checking existence of `"home.startWorkout" Button`
+    t =     9.18s         Capturing element debug description
+    t =    10.01s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =    10.01s         Checking existence of `"home.startWorkout" Button`
+    t =    10.10s         Capturing element debug description
+    t =    11.01s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =    11.01s         Checking existence of `"home.startWorkout" Button`
+    t =    11.07s         Capturing element debug description
+    t =    12.07s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =    12.07s         Checking existence of `"home.startWorkout" Button`
+    t =    12.15s         Capturing element debug description
+    t =    13.01s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =    13.01s         Checking existence of `"home.startWorkout" Button`
+    t =    13.09s         Capturing element debug description
+    t =    13.09s     Checking existence of `"home.startWorkout" Button`
+    t =    13.17s Collecting debug information to assist test failure triage
+    t =    13.17s     Requesting snapshot of accessibility hierarchy for app with pid 13121
+    t =    13.29s Waiting 5.0s for "home.startPush" Button to exist
+    t =    14.36s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startPush" Button`
+    t =    14.36s         Checking existence of `"home.startPush" Button`
+    t =    14.42s Tap "home.startPush" Button
+    t =    14.42s     Wait for com.liftfuel.app to idle
+    t =    14.42s     Find the "home.startPush" Button
+    t =    14.49s     Check for interrupting elements affecting "home.startPush" Button
+    t =    14.54s     Synthesize event
+    t =    14.87s     Wait for com.liftfuel.app to idle
+    t =    15.89s Waiting 5.0s for "workout.finish" Button to exist
+    t =    16.93s     Checking `Expect predicate `existsNoRetry == 1` for object "workout.finish" Button`
+    t =    16.93s         Checking existence of `"workout.finish" Button`
+    t =    17.12s Checking existence of `Any (First Match)`
+    t =    17.32s Tap "workout.addSet" Button
+    t =    17.32s     Wait for com.liftfuel.app to idle
+    t =    17.32s     Find the "workout.addSet" Button
+    t =    17.49s     Check for interrupting elements affecting "workout.addSet" Button
+    t =    17.58s     Synthesize event
+    t =    17.91s     Wait for com.liftfuel.app to idle
+    t =    18.20s Waiting 3.0s for Any (First Match) to exist
+    t =    19.21s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    19.21s         Checking existence of `Any (First Match)`
+    t =    19.41s Find the "workout.discard" Button
+    t =    20.51s     Find the "workout.discard" Button (retry 1)
+    t =    21.60s     Find the "workout.discard" Button (retry 2)
+    t =    21.71s Swipe up Target Application 'com.liftfuel.app'
+    t =    21.72s     Wait for com.liftfuel.app to idle
+    t =    21.72s     Find the Target Application 'com.liftfuel.app'
+    t =    21.79s     Check for interrupting elements affecting "Lift & Fuel" Application
+    t =    21.86s     Synthesize event
+    t =    22.28s     Wait for com.liftfuel.app to idle
+    t =    24.39s Find the "workout.discard" Button
+    t =    25.61s     Find the "workout.discard" Button (retry 1)
+    t =    26.71s     Find the "workout.discard" Button (retry 2)
+    t =    26.82s Swipe up Target Application 'com.liftfuel.app'
+    t =    26.82s     Wait for com.liftfuel.app to idle
+    t =    26.82s     Find the Target Application 'com.liftfuel.app'
+    t =    26.91s     Check for interrupting elements affecting "Lift & Fuel" Application
+    t =    27.01s     Synthesize event
+    t =    27.44s     Wait for com.liftfuel.app to idle
+    t =    30.16s Find the "workout.discard" Button
+    t =    31.29s     Find the "workout.discard" Button (retry 1)
+    t =    32.40s     Find the "workout.discard" Button (retry 2)
+    t =    32.49s Swipe up Target Application 'com.liftfuel.app'
+    t =    32.49s     Wait for com.liftfuel.app to idle
+    t =    32.50s     Find the Target Application 'com.liftfuel.app'
+    t =    32.56s     Check for interrupting elements affecting "Lift & Fuel" Application
+    t =    32.63s     Synthesize event
+    t =    33.06s     Wait for com.liftfuel.app to idle
+    t =    33.83s Find the "workout.discard" Button
+    t =    34.17s Find the "workout.discard" Button
+    t =    34.37s Find the "workout.discard" Button
+    t =    34.49s Find the "workout.discard" Button
+    t =    34.64s Find the "workout.discard" Button
+    t =    34.76s Tap "workout.discard" Button
+    t =    34.76s     Wait for com.liftfuel.app to idle
+    t =    34.76s     Find the "workout.discard" Button
+    t =    34.87s     Check for interrupting elements affecting "workout.discard" Button
+    t =    34.99s     Synthesize event
+    t =    35.29s     Wait for com.liftfuel.app to idle
+    t =    36.39s Waiting 3.0s for "workout.discardConfirm" Button to exist
+    t =    37.45s     Checking `Expect predicate `existsNoRetry == 1` for object "workout.discardConfirm" Button`
+    t =    37.45s         Checking existence of `"workout.discardConfirm" Button`
+    t =    37.52s Tap "workout.discardConfirm" Button
+    t =    37.52s     Wait for com.liftfuel.app to idle
+    t =    37.53s     Find the "workout.discardConfirm" Button
+    t =    37.60s     Check for interrupting elements affecting "workout.discardConfirm" Button
+    t =    37.69s     Synthesize event
+    t =    38.03s     Wait for com.liftfuel.app to idle
+    t =    38.62s Waiting 5.0s for "hub.startPush" Button to exist
+    t =    39.66s     Checking `Expect predicate `existsNoRetry == 1` for object "hub.startPush" Button`
+    t =    39.66s         Checking existence of `"hub.startPush" Button`
+    t =    39.86s Tear Down
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testAddSetAndDiscard]' passed (40.232 seconds).
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testCoachLogsMealWithMockService]' started.
+    t =     0.00s Start Test at 2026-10-22 21:59:54.764
+    t =     0.05s Set Up
+    t =     0.05s Open com.liftfuel.app
+    t =     0.05s     Launch com.liftfuel.app
+    t =     0.05s         Terminate com.liftfuel.app:13121
+    t =     2.33s         Setting up automation session
+    t =     3.95s         Wait for com.liftfuel.app to idle
+    t =     6.50s Tap "Coach" Button
+    t =     6.50s     Wait for com.liftfuel.app to idle
+    t =     6.51s     Find the "Coach" Button
+    t =     6.91s     Check for interrupting elements affecting "Coach" Button
+    t =     7.01s     Synthesize event
+    t =     7.33s     Wait for com.liftfuel.app to idle
+    t =     9.64s Waiting 5.0s for "coach.input" Any to exist
+    t =    10.66s     Checking `Expect predicate `existsNoRetry == 1` for object "coach.input" Any`
+    t =    10.66s         Checking existence of `"coach.input" Any`
+    t =    10.93s Tap "coach.input" Any
+    t =    10.93s     Wait for com.liftfuel.app to idle
+    t =    10.93s     Find the "coach.input" Any
+    t =    11.11s     Check for interrupting elements affecting "coach.input" TextField
+    t =    11.25s     Synthesize event
+    t =    11.55s     Wait for com.liftfuel.app to idle
+    t =    13.54s Type '2 scrambled eggs, ...' into "coach.input" TextField
+    t =    13.54s     Wait for com.liftfuel.app to idle
+    t =    14.74s     Find the "coach.input" TextField
+    t =    15.68s     Check for interrupting elements affecting "coach.input" TextField
+    t =    15.84s     Synthesize event
+    t =    17.05s     Wait for com.liftfuel.app to idle
+    t =    17.06s Tap "coach.send" Button
+    t =    17.06s     Wait for com.liftfuel.app to idle
+    t =    17.06s     Find the "coach.send" Button
+    t =    17.16s     Check for interrupting elements affecting "coach.send" Button
+    t =    17.24s     Synthesize event
+    t =    17.54s     Wait for com.liftfuel.app to idle
+    t =    18.60s Waiting 10.0s for "mealCard.confirm" Button to exist
+    t =    19.66s     Checking `Expect predicate `existsNoRetry == 1` for object "mealCard.confirm" Button`
+    t =    19.67s         Checking existence of `"mealCard.confirm" Button`
+    t =    19.77s Tap "mealCard.confirm" Button
+    t =    19.77s     Wait for com.liftfuel.app to idle
+    t =    19.77s     Find the "mealCard.confirm" Button
+    t =    19.87s     Check for interrupting elements affecting "mealCard.confirm" Button
+    t =    20.00s     Synthesize event
+    t =    20.31s     Wait for com.liftfuel.app to idle
+    t =    20.53s Tap "Nutrition" Button
+    t =    20.53s     Wait for com.liftfuel.app to idle
+    t =    20.53s     Find the "Nutrition" Button
+    t =    20.69s     Check for interrupting elements affecting "fork.knife" Button
+    t =    20.76s     Synthesize event
+    t =    20.78s         Scroll element to visible
+    t =    20.78s         Find the "fork.knife" Button
+    t =    21.16s         Computed hit point {-1, -1} after scrolling to visible
+    t =    21.47s     Wait for com.liftfuel.app to idle
+    t =    21.48s Waiting 5.0s for Any (First Match) to exist
+    t =    22.49s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    22.49s         Checking existence of `Any (First Match)`
+    t =    22.88s Tear Down
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testCoachLogsMealWithMockService]' passed (23.250 seconds).
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testStartLogAndFinishWorkout]' started.
+    t =     0.00s Start Test at 2026-10-22 22:00:18.012
+    t =     0.07s Set Up
+    t =     0.08s Open com.liftfuel.app
+    t =     0.08s     Launch com.liftfuel.app
+    t =     0.08s         Terminate com.liftfuel.app:14916
+    t =     2.61s         Setting up automation session
+    t =     4.94s         Wait for com.liftfuel.app to idle
+    t =     7.73s Waiting 5.0s for "home.startWorkout" Button to exist
+    t =     8.79s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =     8.79s         Checking existence of `"home.startWorkout" Button`
+    t =     8.96s         Capturing element debug description
+    t =     9.77s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =     9.77s         Checking existence of `"home.startWorkout" Button`
+    t =     9.85s         Capturing element debug description
+    t =    10.77s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =    10.77s         Checking existence of `"home.startWorkout" Button`
+    t =    10.84s         Capturing element debug description
+    t =    11.77s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =    11.77s         Checking existence of `"home.startWorkout" Button`
+    t =    11.88s         Capturing element debug description
+    t =    12.73s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startWorkout" Button`
+    t =    12.73s         Checking existence of `"home.startWorkout" Button`
+    t =    12.81s         Capturing element debug description
+    t =    12.81s     Checking existence of `"home.startWorkout" Button`
+    t =    12.88s Collecting debug information to assist test failure triage
+    t =    12.88s     Requesting snapshot of accessibility hierarchy for app with pid 15580
+    t =    12.99s Waiting 5.0s for "home.startPush" Button to exist
+    t =    14.02s     Checking `Expect predicate `existsNoRetry == 1` for object "home.startPush" Button`
+    t =    14.02s         Checking existence of `"home.startPush" Button`
+    t =    14.10s Tap "home.startPush" Button
+    t =    14.10s     Wait for com.liftfuel.app to idle
+    t =    14.10s     Find the "home.startPush" Button
+    t =    14.16s     Check for interrupting elements affecting "home.startPush" Button
+    t =    14.24s     Synthesize event
+    t =    14.59s     Wait for com.liftfuel.app to idle
+    t =    15.67s Waiting 5.0s for "workout.finish" Button to exist
+    t =    16.69s     Checking `Expect predicate `existsNoRetry == 1` for object "workout.finish" Button`
+    t =    16.69s         Checking existence of `"workout.finish" Button`
+    t =    16.96s Waiting 3.0s for "set.weight" Button to exist
+    t =    17.98s     Checking `Expect predicate `existsNoRetry == 1` for object "set.weight" Button`
+    t =    17.98s         Checking existence of `"set.weight" Button`
+    t =    18.14s Tap "set.weight" Button
+    t =    18.14s     Wait for com.liftfuel.app to idle
+    t =    18.15s     Find the "set.weight" Button
+    t =    18.30s     Check for interrupting elements affecting "set.weight" Button
+    t =    18.38s     Synthesize event
+    t =    18.71s     Wait for com.liftfuel.app to idle
+    t =    18.73s Waiting 3.0s for "keypad.done" Button to exist
+    t =    19.80s     Checking `Expect predicate `existsNoRetry == 1` for object "keypad.done" Button`
+    t =    19.80s         Checking existence of `"keypad.done" Button`
+    t =    19.90s Tap "keypad.4" Button
+    t =    19.90s     Wait for com.liftfuel.app to idle
+    t =    19.90s     Find the "keypad.4" Button
+    t =    20.00s     Check for interrupting elements affecting "keypad.4" Button
+    t =    20.07s     Synthesize event
+    t =    20.40s     Wait for com.liftfuel.app to idle
+    t =    20.40s Tap "keypad.5" Button
+    t =    20.40s     Wait for com.liftfuel.app to idle
+    t =    20.41s     Find the "keypad.5" Button
+    t =    20.52s     Check for interrupting elements affecting "keypad.5" Button
+    t =    20.62s     Synthesize event
+    t =    20.93s     Wait for com.liftfuel.app to idle
+    t =    20.93s Tap "keypad.done" Button
+    t =    20.93s     Wait for com.liftfuel.app to idle
+    t =    20.93s     Find the "keypad.done" Button
+    t =    21.03s     Check for interrupting elements affecting "keypad.done" Button
+    t =    21.10s     Synthesize event
+    t =    21.44s     Wait for com.liftfuel.app to idle
+    t =    21.44s Tap "set.complete" Button
+    t =    21.44s     Wait for com.liftfuel.app to idle
+    t =    21.45s     Find the "set.complete" Button
+    t =    22.02s     Check for interrupting elements affecting "set.complete" Button
+    t =    22.36s     Synthesize event
+    t =    22.70s     Wait for com.liftfuel.app to idle
+    t =    22.81s Waiting 3.0s for "Skip rest" Button to exist
+    t =    23.88s     Checking `Expect predicate `existsNoRetry == 1` for object "Skip rest" Button`
+    t =    23.88s         Checking existence of `"Skip rest" Button`
+    t =    24.05s Tap "workout.finish" Button
+    t =    24.05s     Wait for com.liftfuel.app to idle
+    t =    24.06s     Find the "workout.finish" Button
+    t =    24.45s     Check for interrupting elements affecting "workout.finish" Button
+    t =    24.58s     Synthesize event
+    t =    24.95s     Wait for com.liftfuel.app to idle
+    t =    25.94s Waiting 3.0s for "workout.finishConfirm" Button to exist
+    t =    26.98s     Checking `Expect predicate `existsNoRetry == 1` for object "workout.finishConfirm" Button`
+    t =    26.98s         Checking existence of `"workout.finishConfirm" Button`
+    t =    27.22s Tap "workout.finishConfirm" Button
+    t =    27.22s     Wait for com.liftfuel.app to idle
+    t =    27.23s     Find the "workout.finishConfirm" Button
+    t =    27.38s     Check for interrupting elements affecting "workout.finishConfirm" Button
+    t =    27.61s     Synthesize event
+    t =    27.97s     Wait for com.liftfuel.app to idle
+    t =    28.69s Waiting 5.0s for "Workout complete" StaticText to exist
+    t =    29.71s     Checking `Expect predicate `existsNoRetry == 1` for object "Workout complete" StaticText`
+    t =    29.72s         Checking existence of `"Workout complete" StaticText`
+    t =    30.45s Tap "summary.done" Button
+    t =    30.45s     Wait for com.liftfuel.app to idle
+    t =    30.69s     Find the "summary.done" Button
+    t =    30.86s     Check for interrupting elements affecting "summary.done" Button
+    t =    30.96s     Synthesize event
+    t =    31.29s     Wait for com.liftfuel.app to idle
+    t =    31.76s Waiting 5.0s for "hub.startPush" Button to exist
+    t =    32.77s     Checking `Expect predicate `existsNoRetry == 1` for object "hub.startPush" Button`
+    t =    32.77s         Checking existence of `"hub.startPush" Button`
+    t =    32.85s Tear Down
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testStartLogAndFinishWorkout]' passed (33.149 seconds).
+Test Suite 'WorkoutFlowUITests' passed at 2026-10-22 22:00:51.162.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 96.631 (96.633) seconds
+Test Suite 'LiftFuelUITests.xctest' passed at 2026-10-22 22:00:51.163.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 162.048 (162.054) seconds
+Test Suite 'All tests' passed at 2026-10-22 22:00:51.163.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 162.048 (162.055) seconds
+2026-10-22 22:00:52.285 xcodebuild[2981:13315] [MT] IDETestOperationsObserverDebug: 209.454 elapsed -- Testing started completed.
+2026-10-22 22:00:52.285 xcodebuild[2981:13315] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-22 22:00:52.285 xcodebuild[2981:13315] [MT] IDETestOperationsObserverDebug: 209.454 sec, +209.454 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/runner/work/fitrise/fitrise/ci-out/Results.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

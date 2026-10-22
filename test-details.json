@@ -1,0 +1,748 @@
+{
+  "devices" : [
+    {
+      "architecture" : "arm64",
+      "deviceId" : "2911FD29-A09E-4A81-BEA7-99A616FB7FC8",
+      "deviceName" : "iPhone 16",
+      "modelName" : "iPhone 16",
+      "osBuildNumber" : "23C54",
+      "osVersion" : "26.2",
+      "platform" : "iOS Simulator"
+    }
+  ],
+  "testNodes" : [
+    {
+      "children" : [
+        {
+          "children" : [
+            {
+              "children" : [
+                {
+                  "duration" : "0.014s",
+                  "durationInSeconds" : 0.013789892196655273,
+                  "name" : "testContextBlockHasRealNumbers()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testContextBlockHasRealNumbers()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testContextBlockHasRealNumbers",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0035s",
+                  "durationInSeconds" : 0.003484010696411133,
+                  "name" : "testEmptyStreamIsInvalid()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testEmptyStreamIsInvalid()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testEmptyStreamIsInvalid",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.011s",
+                  "durationInSeconds" : 0.010963916778564453,
+                  "name" : "testHTTPErrorMapping()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testHTTPErrorMapping()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testHTTPErrorMapping",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0011s",
+                  "durationInSeconds" : 0.0010699033737182617,
+                  "name" : "testLogMealIsLenientOnNumericStringsAndMissingOptionals()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testLogMealIsLenientOnNumericStringsAndMissingOptionals()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testLogMealIsLenientOnNumericStringsAndMissingOptionals",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0018s",
+                  "durationInSeconds" : 0.0018470287322998047,
+                  "name" : "testLogMealRejectsNegativeValues()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testLogMealRejectsNegativeValues()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testLogMealRejectsNegativeValues",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00075s",
+                  "durationInSeconds" : 0.0007510185241699219,
+                  "name" : "testLogMealRequiresItems()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testLogMealRequiresItems()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testLogMealRequiresItems",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00092s",
+                  "durationInSeconds" : 0.0009230375289916992,
+                  "name" : "testLowConfidenceIsParsed()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testLowConfidenceIsParsed()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testLowConfidenceIsParsed",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0011s",
+                  "durationInSeconds" : 0.0011049509048461914,
+                  "name" : "testParsesToolUseResponse()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testParsesToolUseResponse()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testParsesToolUseResponse",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0014s",
+                  "durationInSeconds" : 0.0013560056686401367,
+                  "name" : "testRefusalStopReason()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testRefusalStopReason()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testRefusalStopReason",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0008s",
+                  "durationInSeconds" : 0.000800013542175293,
+                  "name" : "testRejectsNonMessage()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testRejectsNonMessage()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testRejectsNonMessage",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0083s",
+                  "durationInSeconds" : 0.008346080780029297,
+                  "name" : "testRequestBody()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testRequestBody()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testRequestBody",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.059s",
+                  "durationInSeconds" : 0.05946993827819824,
+                  "name" : "testSSEParserHandlesCRLFAndComments()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testSSEParserHandlesCRLFAndComments()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testSSEParserHandlesCRLFAndComments",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00078s",
+                  "durationInSeconds" : 0.000782012939453125,
+                  "name" : "testStreamingErrorEventThrows()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testStreamingErrorEventThrows()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testStreamingErrorEventThrows",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0021s",
+                  "durationInSeconds" : 0.0020819902420043945,
+                  "name" : "testStreamingTextAndToolUse()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testStreamingTextAndToolUse()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testStreamingTextAndToolUse",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0011s",
+                  "durationInSeconds" : 0.0010640621185302734,
+                  "name" : "testStreamingToolInputJSONIsAssembled()",
+                  "nodeIdentifier" : "ClaudeParsingTests/testStreamingToolInputJSONIsAssembled()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests/testStreamingToolInputJSONIsAssembled",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "ClaudeParsingTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ClaudeParsingTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "0.00071s",
+                  "durationInSeconds" : 0.0007110834121704102,
+                  "name" : "testActivityMultipliers()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testActivityMultipliers()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testActivityMultipliers",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0005s",
+                  "durationInSeconds" : 0.0004971027374267578,
+                  "name" : "testCaloriesOverrideRecomputesMacros()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testCaloriesOverrideRecomputesMacros()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testCaloriesOverrideRecomputesMacros",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00041s",
+                  "durationInSeconds" : 0.00040793418884277344,
+                  "name" : "testCarbsNeverNegative()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testCarbsNeverNegative()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testCarbsNeverNegative",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00055s",
+                  "durationInSeconds" : 0.0005480051040649414,
+                  "name" : "testFatNeverBelowTwentyPercent()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testFatNeverBelowTwentyPercent()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testFatNeverBelowTwentyPercent",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0081s",
+                  "durationInSeconds" : 0.008134007453918457,
+                  "name" : "testFullTargetsForDefaultUser()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testFullTargetsForDefaultUser()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testFullTargetsForDefaultUser",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00064s",
+                  "durationInSeconds" : 0.0006350278854370117,
+                  "name" : "testLeanBulkSurplusIsClampedTo250To400()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testLeanBulkSurplusIsClampedTo250To400()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testLeanBulkSurplusIsClampedTo250To400",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00055s",
+                  "durationInSeconds" : 0.0005530118942260742,
+                  "name" : "testMacrosAddUpToCalories()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testMacrosAddUpToCalories()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testMacrosAddUpToCalories",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0006s",
+                  "durationInSeconds" : 0.0005970001220703125,
+                  "name" : "testMifflinStJeorFemale()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testMifflinStJeorFemale()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testMifflinStJeorFemale",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00058s",
+                  "durationInSeconds" : 0.0005840063095092773,
+                  "name" : "testMifflinStJeorMale()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testMifflinStJeorMale()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testMifflinStJeorMale",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00052s",
+                  "durationInSeconds" : 0.0005199909210205078,
+                  "name" : "testProteinOverrideKeepsCaloriesAndAdjustsCarbs()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testProteinOverrideKeepsCaloriesAndAdjustsCarbs()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testProteinOverrideKeepsCaloriesAndAdjustsCarbs",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00045s",
+                  "durationInSeconds" : 0.0004519224166870117,
+                  "name" : "testWeightChangeChangesTargets()",
+                  "nodeIdentifier" : "NutritionCalculatorTests/testWeightChangeChangesTargets()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests/testWeightChangeChangesTargets",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "NutritionCalculatorTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/NutritionCalculatorTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "0.058s",
+                  "durationInSeconds" : 0.05812191963195801,
+                  "name" : "testAddAndDeleteSetRenumbers()",
+                  "nodeIdentifier" : "PersistenceTests/testAddAndDeleteSetRenumbers()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testAddAndDeleteSetRenumbers",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.098s",
+                  "durationInSeconds" : 0.09751200675964355,
+                  "name" : "testCoachEngineLogsMealWithMockService()",
+                  "nodeIdentifier" : "PersistenceTests/testCoachEngineLogsMealWithMockService()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testCoachEngineLogsMealWithMockService",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.011s",
+                  "durationInSeconds" : 0.010830044746398926,
+                  "name" : "testCoachHistoryStartsWithUserAndMergesRoles()",
+                  "nodeIdentifier" : "PersistenceTests/testCoachHistoryStartsWithUserAndMergesRoles()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testCoachHistoryStartsWithUserAndMergesRoles",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.018s",
+                  "durationInSeconds" : 0.017779946327209473,
+                  "name" : "testCopyYesterday()",
+                  "nodeIdentifier" : "PersistenceTests/testCopyYesterday()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testCopyYesterday",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0083s",
+                  "durationInSeconds" : 0.008296012878417969,
+                  "name" : "testDefaultTemplateIsSeeded()",
+                  "nodeIdentifier" : "PersistenceTests/testDefaultTemplateIsSeeded()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testDefaultTemplateIsSeeded",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.028s",
+                  "durationInSeconds" : 0.028306007385253906,
+                  "name" : "testDiscardRemovesSession()",
+                  "nodeIdentifier" : "PersistenceTests/testDiscardRemovesSession()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testDiscardRemovesSession",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.48s",
+                  "durationInSeconds" : 0.47998499870300293,
+                  "name" : "testExportProducesCSV()",
+                  "nodeIdentifier" : "PersistenceTests/testExportProducesCSV()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testExportProducesCSV",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.017s",
+                  "durationInSeconds" : 0.017367959022521973,
+                  "name" : "testMealLoggingAndSummary()",
+                  "nodeIdentifier" : "PersistenceTests/testMealLoggingAndSummary()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testMealLoggingAndSummary",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.01s",
+                  "durationInSeconds" : 0.010062932968139648,
+                  "name" : "testSeedCreatesOnlyTheFixedLibrary()",
+                  "nodeIdentifier" : "PersistenceTests/testSeedCreatesOnlyTheFixedLibrary()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testSeedCreatesOnlyTheFixedLibrary",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.015s",
+                  "durationInSeconds" : 0.015085101127624512,
+                  "name" : "testSeedIsIdempotentAndRemovesUnknownExercises()",
+                  "nodeIdentifier" : "PersistenceTests/testSeedIsIdempotentAndRemovesUnknownExercises()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testSeedIsIdempotentAndRemovesUnknownExercises",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.02s",
+                  "durationInSeconds" : 0.020199894905090332,
+                  "name" : "testWarmupSetsDoNotCountTowardVolume()",
+                  "nodeIdentifier" : "PersistenceTests/testWarmupSetsDoNotCountTowardVolume()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testWarmupSetsDoNotCountTowardVolume",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.044s",
+                  "durationInSeconds" : 0.04438304901123047,
+                  "name" : "testWorkoutPrefillAndPR()",
+                  "nodeIdentifier" : "PersistenceTests/testWorkoutPrefillAndPR()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests/testWorkoutPrefillAndPR",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "PersistenceTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/PersistenceTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "0.001s",
+                  "durationInSeconds" : 0.001011967658996582,
+                  "name" : "testCompletedThisWeek()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testCompletedThisWeek()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testCompletedThisWeek",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0025s",
+                  "durationInSeconds" : 0.0024690628051757812,
+                  "name" : "testDayKeyRoundTrip()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testDayKeyRoundTrip()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testDayKeyRoundTrip",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0017s",
+                  "durationInSeconds" : 0.0016629695892333984,
+                  "name" : "testDefaultWeeklyTemplate()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testDefaultWeeklyTemplate()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testDefaultWeeklyTemplate",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.017s",
+                  "durationInSeconds" : 0.017369985580444336,
+                  "name" : "testLateEveningStillSameDay()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testLateEveningStillSameDay()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testLateEveningStillSameDay",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00081s",
+                  "durationInSeconds" : 0.0008100271224975586,
+                  "name" : "testMonthGridStartsOnMonday()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testMonthGridStartsOnMonday()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testMonthGridStartsOnMonday",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00076s",
+                  "durationInSeconds" : 0.0007610321044921875,
+                  "name" : "testNextTrainingDayFromThursdayIsFridayPull()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testNextTrainingDayFromThursdayIsFridayPull()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testNextTrainingDayFromThursdayIsFridayPull",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00076s",
+                  "durationInSeconds" : 0.0007569789886474609,
+                  "name" : "testOverrideChangesOnlyThatDate()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testOverrideChangesOnlyThatDate()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testOverrideChangesOnlyThatDate",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0013s",
+                  "durationInSeconds" : 0.0013170242309570312,
+                  "name" : "testPlannedTrainingDaysPerWeek()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testPlannedTrainingDaysPerWeek()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testPlannedTrainingDaysPerWeek",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00075s",
+                  "durationInSeconds" : 0.0007450580596923828,
+                  "name" : "testReferenceDateIsThursday()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testReferenceDateIsThursday()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testReferenceDateIsThursday",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00077s",
+                  "durationInSeconds" : 0.0007650852203369141,
+                  "name" : "testStreakBreaksOnMissedTrainingDay()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testStreakBreaksOnMissedTrainingDay()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testStreakBreaksOnMissedTrainingDay",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00068s",
+                  "durationInSeconds" : 0.0006819963455200195,
+                  "name" : "testStreakNotBrokenByUntrainedToday()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testStreakNotBrokenByUntrainedToday()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testStreakNotBrokenByUntrainedToday",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00064s",
+                  "durationInSeconds" : 0.0006361007690429688,
+                  "name" : "testStreakSkipsRestDaysAndToleratesToday()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testStreakSkipsRestDaysAndToleratesToday()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testStreakSkipsRestDaysAndToleratesToday",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0019s",
+                  "durationInSeconds" : 0.0018939971923828125,
+                  "name" : "testSwapDays()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testSwapDays()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testSwapDays",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0015s",
+                  "durationInSeconds" : 0.0014950037002563477,
+                  "name" : "testUpcomingFromThursday()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testUpcomingFromThursday()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testUpcomingFromThursday",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00075s",
+                  "durationInSeconds" : 0.0007519721984863281,
+                  "name" : "testWeekAcrossYearBoundary()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testWeekAcrossYearBoundary()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testWeekAcrossYearBoundary",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00056s",
+                  "durationInSeconds" : 0.0005550384521484375,
+                  "name" : "testWeekStartsMondayAcrossMonthBoundary()",
+                  "nodeIdentifier" : "ScheduleServiceTests/testWeekStartsMondayAcrossMonthBoundary()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests/testWeekStartsMondayAcrossMonthBoundary",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "ScheduleServiceTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/ScheduleServiceTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "0.00067s",
+                  "durationInSeconds" : 0.0006710290908813477,
+                  "name" : "testBodyWeightMovingAverage()",
+                  "nodeIdentifier" : "StrengthMathTests/testBodyWeightMovingAverage()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testBodyWeightMovingAverage",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00072s",
+                  "durationInSeconds" : 0.0007159709930419922,
+                  "name" : "testEpley()",
+                  "nodeIdentifier" : "StrengthMathTests/testEpley()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testEpley",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00055s",
+                  "durationInSeconds" : 0.000552058219909668,
+                  "name" : "testEstimated1RMPR()",
+                  "nodeIdentifier" : "StrengthMathTests/testEstimated1RMPR()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testEstimated1RMPR",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00058s",
+                  "durationInSeconds" : 0.000576019287109375,
+                  "name" : "testFormatWeight()",
+                  "nodeIdentifier" : "StrengthMathTests/testFormatWeight()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testFormatWeight",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00059s",
+                  "durationInSeconds" : 0.0005919933319091797,
+                  "name" : "testKeypadBuffer()",
+                  "nodeIdentifier" : "StrengthMathTests/testKeypadBuffer()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testKeypadBuffer",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00049s",
+                  "durationInSeconds" : 0.0004850625991821289,
+                  "name" : "testNoPRWithoutHistory()",
+                  "nodeIdentifier" : "StrengthMathTests/testNoPRWithoutHistory()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testNoPRWithoutHistory",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00054s",
+                  "durationInSeconds" : 0.0005360841751098633,
+                  "name" : "testNotAPR()",
+                  "nodeIdentifier" : "StrengthMathTests/testNotAPR()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testNotAPR",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.011s",
+                  "durationInSeconds" : 0.01121509075164795,
+                  "name" : "testOverloadSuggestion()",
+                  "nodeIdentifier" : "StrengthMathTests/testOverloadSuggestion()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testOverloadSuggestion",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00062s",
+                  "durationInSeconds" : 0.0006229877471923828,
+                  "name" : "testPlateauDetection()",
+                  "nodeIdentifier" : "StrengthMathTests/testPlateauDetection()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testPlateauDetection",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00051s",
+                  "durationInSeconds" : 0.000513911247253418,
+                  "name" : "testRepMaxPR()",
+                  "nodeIdentifier" : "StrengthMathTests/testRepMaxPR()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testRepMaxPR",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00058s",
+                  "durationInSeconds" : 0.0005819797515869141,
+                  "name" : "testVolumeExcludesWarmups()",
+                  "nodeIdentifier" : "StrengthMathTests/testVolumeExcludesWarmups()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testVolumeExcludesWarmups",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00051s",
+                  "durationInSeconds" : 0.0005079507827758789,
+                  "name" : "testWarmupsNeverCount()",
+                  "nodeIdentifier" : "StrengthMathTests/testWarmupsNeverCount()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests/testWarmupsNeverCount",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "StrengthMathTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests/StrengthMathTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            }
+          ],
+          "name" : "LiftFuelTests",
+          "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelTests",
+          "nodeType" : "Unit test bundle",
+          "result" : "Passed"
+        },
+        {
+          "children" : [
+            {
+              "children" : [
+                {
+                  "duration" : "10s",
+                  "durationInSeconds" : 10.606014013290405,
+                  "name" : "testLightModeAndOnboarding()",
+                  "nodeIdentifier" : "ScreenshotTests/testLightModeAndOnboarding()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/ScreenshotTests/testLightModeAndOnboarding",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "13s",
+                  "durationInSeconds" : 13.172855019569397,
+                  "name" : "testLightModeHome()",
+                  "nodeIdentifier" : "ScreenshotTests/testLightModeHome()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/ScreenshotTests/testLightModeHome",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "41s",
+                  "durationInSeconds" : 41.63805902004242,
+                  "name" : "testMainScreens()",
+                  "nodeIdentifier" : "ScreenshotTests/testMainScreens()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/ScreenshotTests/testMainScreens",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "ScreenshotTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/ScreenshotTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "40s",
+                  "durationInSeconds" : 40.23190093040466,
+                  "name" : "testAddSetAndDiscard()",
+                  "nodeIdentifier" : "WorkoutFlowUITests/testAddSetAndDiscard()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/WorkoutFlowUITests/testAddSetAndDiscard",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "23s",
+                  "durationInSeconds" : 23.250144004821777,
+                  "name" : "testCoachLogsMealWithMockService()",
+                  "nodeIdentifier" : "WorkoutFlowUITests/testCoachLogsMealWithMockService()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/WorkoutFlowUITests/testCoachLogsMealWithMockService",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "33s",
+                  "durationInSeconds" : 33.14932298660278,
+                  "name" : "testStartLogAndFinishWorkout()",
+                  "nodeIdentifier" : "WorkoutFlowUITests/testStartLogAndFinishWorkout()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/WorkoutFlowUITests/testStartLogAndFinishWorkout",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "WorkoutFlowUITests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests/WorkoutFlowUITests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            }
+          ],
+          "name" : "LiftFuelUITests",
+          "nodeIdentifierURL" : "test://com.apple.xcode/LiftFuel/LiftFuelUITests",
+          "nodeType" : "UI test bundle",
+          "result" : "Passed"
+        }
+      ],
+      "name" : "LiftFuel",
+      "nodeType" : "Test Plan",
+      "result" : "Passed"
+    }
+  ],
+  "testPlanConfigurations" : [
+    {
+      "configurationId" : "1",
+      "configurationName" : "Test Scheme Action"
+    }
+  ]
+}

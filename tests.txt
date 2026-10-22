@@ -1,0 +1,83 @@
+Test Case '-[LiftFuelTests.ClaudeParsingTests testContextBlockHasRealNumbers]' passed (0.014 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testEmptyStreamIsInvalid]' passed (0.003 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testHTTPErrorMapping]' passed (0.011 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testLogMealIsLenientOnNumericStringsAndMissingOptionals]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testLogMealRejectsNegativeValues]' passed (0.002 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testLogMealRequiresItems]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testLowConfidenceIsParsed]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testParsesToolUseResponse]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testRefusalStopReason]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testRejectsNonMessage]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testRequestBody]' passed (0.008 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testSSEParserHandlesCRLFAndComments]' passed (0.059 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testStreamingErrorEventThrows]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testStreamingTextAndToolUse]' passed (0.002 seconds).
+Test Case '-[LiftFuelTests.ClaudeParsingTests testStreamingToolInputJSONIsAssembled]' passed (0.001 seconds).
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.108 (0.150) seconds
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testActivityMultipliers]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testCaloriesOverrideRecomputesMacros]' passed (0.000 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testCarbsNeverNegative]' passed (0.000 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testFatNeverBelowTwentyPercent]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testFullTargetsForDefaultUser]' passed (0.008 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testLeanBulkSurplusIsClampedTo250To400]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testMacrosAddUpToCalories]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testMifflinStJeorFemale]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testMifflinStJeorMale]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testProteinOverrideKeepsCaloriesAndAdjustsCarbs]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.NutritionCalculatorTests testWeightChangeChangesTargets]' passed (0.000 seconds).
+	 Executed 11 tests, with 0 failures (0 unexpected) in 0.014 (0.034) seconds
+Test Case '-[LiftFuelTests.PersistenceTests testAddAndDeleteSetRenumbers]' passed (0.058 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testCoachEngineLogsMealWithMockService]' passed (0.098 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testCoachHistoryStartsWithUserAndMergesRoles]' passed (0.011 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testCopyYesterday]' passed (0.018 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testDefaultTemplateIsSeeded]' passed (0.008 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testDiscardRemovesSession]' passed (0.028 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testExportProducesCSV]' passed (0.480 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testMealLoggingAndSummary]' passed (0.017 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testSeedCreatesOnlyTheFixedLibrary]' passed (0.010 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testSeedIsIdempotentAndRemovesUnknownExercises]' passed (0.015 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testWarmupSetsDoNotCountTowardVolume]' passed (0.020 seconds).
+Test Case '-[LiftFuelTests.PersistenceTests testWorkoutPrefillAndPR]' passed (0.044 seconds).
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.808 (0.812) seconds
+Test Case '-[LiftFuelTests.ScheduleServiceTests testCompletedThisWeek]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testDayKeyRoundTrip]' passed (0.002 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testDefaultWeeklyTemplate]' passed (0.002 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testLateEveningStillSameDay]' passed (0.017 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testMonthGridStartsOnMonday]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testNextTrainingDayFromThursdayIsFridayPull]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testOverrideChangesOnlyThatDate]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testPlannedTrainingDaysPerWeek]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testReferenceDateIsThursday]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testStreakBreaksOnMissedTrainingDay]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testStreakNotBrokenByUntrainedToday]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testStreakSkipsRestDaysAndToleratesToday]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testSwapDays]' passed (0.002 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testUpcomingFromThursday]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testWeekAcrossYearBoundary]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.ScheduleServiceTests testWeekStartsMondayAcrossMonthBoundary]' passed (0.001 seconds).
+	 Executed 16 tests, with 0 failures (0 unexpected) in 0.034 (0.047) seconds
+Test Case '-[LiftFuelTests.StrengthMathTests testBodyWeightMovingAverage]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testEpley]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testEstimated1RMPR]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testFormatWeight]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testKeypadBuffer]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testNoPRWithoutHistory]' passed (0.000 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testNotAPR]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testOverloadSuggestion]' passed (0.011 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testPlateauDetection]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testRepMaxPR]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testVolumeExcludesWarmups]' passed (0.001 seconds).
+Test Case '-[LiftFuelTests.StrengthMathTests testWarmupsNeverCount]' passed (0.001 seconds).
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.018 (0.037) seconds
+	 Executed 66 tests, with 0 failures (0 unexpected) in 0.981 (1.081) seconds
+	 Executed 66 tests, with 0 failures (0 unexpected) in 0.981 (1.082) seconds
+Test Case '-[LiftFuelUITests.ScreenshotTests testLightModeAndOnboarding]' passed (10.606 seconds).
+Test Case '-[LiftFuelUITests.ScreenshotTests testLightModeHome]' passed (13.173 seconds).
+Test Case '-[LiftFuelUITests.ScreenshotTests testMainScreens]' passed (41.638 seconds).
+	 Executed 3 tests, with 0 failures (0 unexpected) in 65.417 (65.419) seconds
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testAddSetAndDiscard]' passed (40.232 seconds).
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testCoachLogsMealWithMockService]' passed (23.250 seconds).
+Test Case '-[LiftFuelUITests.WorkoutFlowUITests testStartLogAndFinishWorkout]' passed (33.149 seconds).
+	 Executed 3 tests, with 0 failures (0 unexpected) in 96.631 (96.633) seconds
+	 Executed 6 tests, with 0 failures (0 unexpected) in 162.048 (162.054) seconds
+	 Executed 6 tests, with 0 failures (0 unexpected) in 162.048 (162.055) seconds
