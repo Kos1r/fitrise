@@ -4,9 +4,16 @@
 // app token; the Worker checks the token, rate-limits, validates the request and
 // forwards it to the Messages API with the key stored as a Worker secret.
 //
+// Provider: PROVIDER = "gemini" (default, free tier) or "anthropic" (wrangler.toml [vars]).
+// The app always speaks the Claude Messages format; for Gemini the Worker translates
+// requests and streamed responses (see gemini.js).
+//
 // Secrets (set with `wrangler secret put`):
-//   ANTHROPIC_API_KEY  — your Anthropic API key
+//   GEMINI_API_KEY     — Google AI Studio key (when PROVIDER = "gemini")
+//   ANTHROPIC_API_KEY  — Anthropic API key (when PROVIDER = "anthropic")
 //   APP_TOKEN          — long random string; also entered in the app (Settings › Coach connection)
+
+import { DEFAULT_GEMINI_MODEL, GeminiStreamTranslator, eventsToMessage, mapGeminiError, sse, toGeminiRequest } from "./gemini.js";
 
 const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
 const DEFAULT_VERSION = "2026-10-21";
@@ -32,8 +39,10 @@ export default {
     if (request.method !== "POST") {
       return error(405, "method_not_allowed", "Use POST");
     }
-    if (!env.ANTHROPIC_API_KEY || !env.APP_TOKEN) {
-      return error(500, "misconfigured", "Proxy secrets are not set");
+    const provider = (env.PROVIDER || "gemini").toLowerCase();
+    const providerKey = provider === "anthropic" ? env.ANTHROPIC_API_KEY : env.GEMINI_API_KEY;
+    if (!providerKey || !env.APP_TOKEN) {
+      return error(500, "misconfigured", `Proxy secrets are not set (${provider === "anthropic" ? "ANTHROPIC_API_KEY" : "GEMINI_API_KEY"} and APP_TOKEN)`);
     }
 
     const token = request.headers.get("x-app-token") || "";
@@ -68,6 +77,10 @@ export default {
       return error(400, "invalid_request_error", validation.error);
     }
 
+    if (provider !== "anthropic") {
+      return forwardToGemini(body, env);
+    }
+
     const betas = (request.headers.get("anthropic-beta") || "")
       .split(",")
       .map((b) => b.trim())
@@ -100,6 +113,86 @@ export default {
     return new Response(upstream.body, { status: upstream.status, headers: responseHeaders });
   },
 };
+
+async function forwardToGemini(body, env) {
+  const model = env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:streamGenerateContent?alt=sse`;
+  let upstream;
+  try {
+    upstream = await fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY },
+      body: JSON.stringify(toGeminiRequest(body)),
+    });
+  } catch {
+    return error(502, "upstream_unreachable", "Could not reach the Gemini API");
+  }
+  if (!upstream.ok) {
+    const mapped = mapGeminiError(upstream.status, await upstream.text());
+    return json(mapped.body, mapped.status, mapped.status === 429 ? { "retry-after": "30" } : {});
+  }
+
+  const translator = new GeminiStreamTranslator(model);
+  if (!body.stream) {
+    const events = [];
+    for await (const chunk of geminiChunks(upstream.body)) events.push(...translator.push(chunk));
+    events.push(...translator.finish());
+    return json(eventsToMessage(events));
+  }
+
+  const { readable, writable } = new TransformStream();
+  const writer = writable.getWriter();
+  const encoder = new TextEncoder();
+  (async () => {
+    try {
+      for await (const chunk of geminiChunks(upstream.body)) {
+        const events = translator.push(chunk);
+        if (events.length) await writer.write(encoder.encode(sse(events)));
+      }
+      await writer.write(encoder.encode(sse(translator.finish())));
+    } catch {
+      await writer.write(encoder.encode(sse([{ type: "error", error: { type: "api_error", message: "Gemini stream interrupted" } }])));
+    } finally {
+      await writer.close();
+    }
+  })();
+  return new Response(readable, { status: 200, headers: { "content-type": "text/event-stream", "cache-control": "no-store" } });
+}
+
+/** Parses Gemini's SSE stream (`data: {...}` lines) into JSON chunks. */
+export async function* geminiChunks(stream) {
+  const reader = stream.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  while (true) {
+    const { value, done } = await reader.read();
+    if (value) buffer += decoder.decode(value, { stream: true });
+    let newline;
+    while ((newline = buffer.indexOf("\n")) >= 0) {
+      const line = buffer.slice(0, newline).replace(/\r$/, "");
+      buffer = buffer.slice(newline + 1);
+      if (line.startsWith("data:")) {
+        const data = line.slice(5).trim();
+        if (data && data !== "[DONE]") {
+          try {
+            yield JSON.parse(data);
+          } catch {
+            // ignore malformed keep-alive lines
+          }
+        }
+      }
+    }
+    if (done) break;
+  }
+  const rest = buffer.trim();
+  if (rest.startsWith("data:")) {
+    try {
+      yield JSON.parse(rest.slice(5).trim());
+    } catch {
+      // ignore
+    }
+  }
+}
 
 /** Validates and clamps the request. Mutates `body`. */
 export function sanitize(body) {

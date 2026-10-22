@@ -119,7 +119,7 @@ struct SettingsView: View {
 
             Section("About") {
                 LabeledContent("Version", value: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0")
-                LabeledContent("Coach model", value: AppConfig.claudeModel)
+                LabeledContent("Coach model", value: String(localized: "Chosen on your proxy (default: Gemini Flash)"))
                 Text("Nutrition estimates from photos and descriptions are approximate. This app does not give medical advice.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)

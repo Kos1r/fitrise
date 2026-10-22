@@ -2,8 +2,14 @@ name = "lift-fuel-proxy"
 main = "src/index.js"
 compatibility_date = "2025-09-01"
 
+# Which model provider the coach uses: "gemini" (free tier) or "anthropic".
+[vars]
+PROVIDER = "gemini"
+GEMINI_MODEL = "gemini-3.8-flash"
+
 # Secrets — never put them in this file:
-#   npx wrangler secret put ANTHROPIC_API_KEY
+#   npx wrangler secret put GEMINI_API_KEY      (when PROVIDER = "gemini")
+#   npx wrangler secret put ANTHROPIC_API_KEY   (when PROVIDER = "anthropic")
 #   npx wrangler secret put APP_TOKEN
 
 # Cloudflare Rate Limiting binding: 30 requests per minute per app token + IP.

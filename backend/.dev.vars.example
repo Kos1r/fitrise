@@ -1,3 +1,4 @@
 # Copy to .dev.vars (git-ignored) for `npm run dev`. Development only.
-ANTHROPIC_API_KEY=sk-ant-your-key
+GEMINI_API_KEY=your-google-ai-studio-key
+# ANTHROPIC_API_KEY=sk-ant-your-key   (only if PROVIDER = "anthropic")
 APP_TOKEN=generate-a-long-random-string

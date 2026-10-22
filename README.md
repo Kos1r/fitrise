@@ -92,7 +92,19 @@ xcodebuild test -project LiftFuel.xcodeproj -scheme LiftFuel -destination 'platf
 - rate-limits each token + IP to 30 requests per minute
 - allows only the coach models and drops unexpected fields
 - caps `max_tokens`
-- forwards the request to the Claude Messages API, using the key stored as a Worker secret, and streams the response back
+- forwards the request to Gemini (default) or the Claude Messages API, using the key stored as a Worker secret, and streams the response back
+
+### Choose the model provider
+
+The coach runs on **Google Gemini Flash** (`gemini-3.8-flash`, free tier) by default. The app always uses the Claude Messages format. When `PROVIDER = "gemini"`, the Worker translates requests and streamed replies, including tool calls and Gemini's thought signatures, so switching provider never needs an app update. Set it in `backend/wrangler.toml`:
+
+```toml
+[vars]
+PROVIDER = "gemini"            # or "anthropic"
+GEMINI_MODEL = "gemini-3.8-flash"
+```
+
+Gemini free-tier limits are set per project in Google AI Studio and change over time. One coach message uses 1–3 model requests (the tool calls count). On the free tier, Google may use prompts and photos to improve its products outside the EEA, Switzerland and the UK.
 
 ### Deploy
 
@@ -100,10 +112,12 @@ xcodebuild test -project LiftFuel.xcodeproj -scheme LiftFuel -destination 'platf
 cd backend
 npm install
 npx wrangler login
-npx wrangler secret put ANTHROPIC_API_KEY   # paste your key from console.anthropic.com
-npx wrangler secret put APP_TOKEN           # paste a long random string, e.g. from: openssl rand -hex 32
+npx wrangler secret put GEMINI_API_KEY      # key from aistudio.google.com → Get API key
+npx wrangler secret put APP_TOKEN           # a long random string, e.g. from: openssl rand -hex 32
 npx wrangler deploy
 ```
+
+To use Claude instead, set `PROVIDER = "anthropic"`, run `npx wrangler secret put ANTHROPIC_API_KEY`, and redeploy.
 
 `wrangler deploy` prints a URL such as `https://lift-fuel-proxy.<you>.workers.dev`. To check it:
 
@@ -118,7 +132,7 @@ In the app, open **Settings › Coach connection** and enter:
 - **Proxy URL**: your Worker URL
 - **App token**: the same `APP_TOKEN` (stored in the iOS Keychain)
 
-You can also put your URL in `AppConfig.defaultProxyBaseURL` (`LiftFuel/Core/Config.swift`). The model (default `claude-sonnet-5-5`) and other coach settings are in the same file.
+You can also put your URL in `AppConfig.defaultProxyBaseURL` (`LiftFuel/Core/Config.swift`). The model itself is chosen on the proxy; other coach settings (history length, photo size) are in the same file.
 
 Proxy tests: `cd backend && node --test`.
 

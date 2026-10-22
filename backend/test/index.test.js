@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
 import worker, { constantTimeEqual, sanitize } from "../src/index.js";
 
-const env = { ANTHROPIC_API_KEY: "sk-test", APP_TOKEN: "secret-token" };
+const env = { PROVIDER: "anthropic", ANTHROPIC_API_KEY: "sk-test", APP_TOKEN: "secret-token" };
 const realFetch = globalThis.fetch;
 
 afterEach(() => {
